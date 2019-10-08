@@ -1,0 +1,57 @@
+<form #details="ngForm" (ngSubmit)="pushemployee(details.value)" align="center" >
+<br>
+<br>
+
+<div class="form-group">
+    <label >Employee ID: </label>
+    <input required type="text" #empNameRef1='ngModel' name="eid" ngModel class="form-control">
+    <div *ngIf='empNameRef1.errors && empNameRef1.touched' class="alert alert-danger">
+      <div [hidden]='!empNameRef1.errors.required'>
+        provide Employee ID
+  
+      </div>
+  
+    </div>
+  </div>
+
+
+<div class="form-group">
+  <label>Employee Name: </label>
+  <input required type="text" #empNameRef='ngModel' name="ename" ngModel class="form-control">
+  <div *ngIf='empNameRef.errors && empNameRef.touched' class="alert alert-danger">
+    <div [hidden]='!empNameRef.errors.required'>
+      provide Employee Name
+
+    </div>
+
+  </div>
+</div>
+
+<div class="form-group">
+    <label>Email ID: </label>
+    <input required type="text" #empNameRef2='ngModel' name="email" ngModel class="form-control">
+    <div *ngIf='empNameRef2.errors && empNameRef2.touched' class="alert alert-danger">
+      <div [hidden]='!empNameRef2.errors.required'>
+        provide Employee Email ID
+  
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label>Phone Number: </label>
+      <input required type="text" #empNameRef3='ngModel' name="phone" ngModel class="form-control">
+      <div *ngIf='empNameRef3.errors && empNameRef3.touched' class="alert alert-danger">
+        <div [hidden]='!empNameRef3.errors.required'>
+          provide Employee Phone Number
+    
+        </div>
+    
+      </div>
+    </div>
+
+
+<input type="submit" value="Add Employee" class="btn btn-success">
+
+</form>
